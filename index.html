@@ -1,0 +1,14 @@
+<script>
+function redirectToSpreadsheet() {
+    var userAgent = navigator.userAgent.toLowerCase();
+    
+    if (userAgent.includes("mac") || userAgent.includes("iphone") || userAgent.includes("ipad")) {
+        window.location.href = "numbers://"; // Opens Apple Numbers
+    } else if (userAgent.includes("windows")) {
+        window.location.href = "ms-excel:ofv|u|"; // Opens Microsoft Excel
+    } else {
+        window.location.href = "https://docs.google.com/spreadsheets/"; // Opens Google Sheets
+    }
+}
+redirectToSpreadsheet();
+</script>
