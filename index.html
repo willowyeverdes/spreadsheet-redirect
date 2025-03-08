@@ -1,14 +1,28 @@
-<script>
-function redirectToSpreadsheet() {
-    var userAgent = navigator.userAgent.toLowerCase();
-    
-    if (userAgent.includes("mac") || userAgent.includes("iphone") || userAgent.includes("ipad")) {
-        window.location.href = "numbers://"; // Opens Apple Numbers
-    } else if (userAgent.includes("windows")) {
-        window.location.href = "ms-excel:ofv|u|"; // Opens Microsoft Excel
-    } else {
-        window.location.href = "https://docs.google.com/spreadsheets/"; // Opens Google Sheets
-    }
-}
-redirectToSpreadsheet();
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Your Spreadsheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        h2 { color: #333; }
+        .button { display: block; margin: 10px auto; padding: 15px; width: 250px; font-size: 18px; text-decoration: none; color: white; border-radius: 5px; }
+        .numbers { background-color: #ff9500; }
+        .excel { background-color: #217346; }
+        .google-sheets { background-color: #0f9d58; }
+    </style>
+</head>
+<body>
+
+    <h2>Open Your Budget Spreadsheet</h2>
+    <p>Select your preferred spreadsheet app below:</p>
+
+    <a href="numbers://" class="button numbers">Open in Apple Numbers</a>
+    <a href="ms-excel:ofv|u|" class="button excel">Open in Microsoft Excel</a>
+    <a href="https://docs.google.com/spreadsheets/" class="button google-sheets">Open in Google Sheets</a>
+
+    <p>If your preferred app does not open, try opening it manually and locating your spreadsheet file.</p>
+
+</body>
+</html>
